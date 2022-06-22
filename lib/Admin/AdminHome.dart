@@ -1,4 +1,5 @@
 import 'dart:ui';
+import 'package:eacademia/Admin/AddClass.dart';
 import 'package:eacademia/Components/Cards.dart';
 import 'package:eacademia/Components/BottomNavBar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -40,12 +41,19 @@ class _AdminHomeState extends State<AdminHome> {
                   Wrap(
 
                   children: [
-                    Cards('classroom.svg','Add Class'),
-                    Cards('teacher.svg','Add Teacher'),
-                    Cards('student.svg','Add Student'),
-                    Cards('book.svg','Add Books'),
-                    Cards('fee.svg','Fee Notification'),
-                    Cards('notification.svg','Event Notification'),
+                    InkWell(
+                      child: Cards('assets/classroom.svg','Add Class'),
+                      onTap: (){
+                        Navigator.push(context,
+                            MaterialPageRoute(
+                                builder: (context) => AddClass()));
+                      },
+                    ),
+                    Cards('assets/teacher.svg','Add Teacher'),
+                    Cards('assets/student.svg','Add Student'),
+                    Cards('assets/book.svg','Add Books'),
+                    Cards('assets/fee.svg','Fee Notification'),
+                    Cards('assets/notification.svg','Event Notification'),
 
                   ],
                   ),
