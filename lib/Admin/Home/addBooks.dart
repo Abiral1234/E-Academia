@@ -7,15 +7,14 @@ import 'package:flutter/material.dart';
 
 import '../../Colors.dart';
 
-
-class AddClass extends StatefulWidget {
-  const AddClass({Key? key}) : super(key: key);
+class AddBooks extends StatefulWidget {
+  const AddBooks({Key? key}) : super(key: key);
 
   @override
-  State<AddClass> createState() => _AddClassState();
+  State<AddBooks> createState() => _AddBooksState();
 }
 
-class _AddClassState extends State<AddClass> {
+class _AddBooksState extends State<AddBooks> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,57 +33,71 @@ class _AddClassState extends State<AddClass> {
             sigmaX: 5.0,
             sigmaY: 5.0,
           ),
-          child: AddClassForm(),
+          child: AddBooksForm(),
         ),
       ),
     );
   }
 }
-
-class AddClassForm extends StatefulWidget {
-  const AddClassForm({Key? key}) : super(key: key);
+class AddBooksForm extends StatefulWidget {
+  const AddBooksForm({Key? key}) : super(key: key);
 
   @override
-  State<AddClassForm> createState() => _AddClassFormState();
+  State<AddBooksForm> createState() => _AddBooksFormState();
 }
 
-class _AddClassFormState extends State<AddClassForm> {
-
+class _AddBooksFormState extends State<AddBooksForm> {
+  
   final _formkey = GlobalKey<FormState>();
-
+  
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.all(24),
       child: Form(
         key: _formkey,
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             TextFormField(
               decoration: const InputDecoration(
-                hintText: 'Enter Class Id',
-                labelText: 'Class Id',
+                hintText: 'Enter Book Id',
+                labelText: 'Book Id',
                 fillColor: Colors.blue,
               ),
             ),
             TextFormField(
               decoration: const InputDecoration(
-                hintText: 'Enter Class Name',
-                labelText: 'Class Name',
+                hintText: 'Enter Book Name',
+                labelText: 'Book Name',
+                fillColor: Colors.blue,
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                hintText: 'YY/MM/DD',
+                labelText: 'Borrowed Date',
+                fillColor: Colors.blue,
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                hintText: 'YY/MM/DD',
+                labelText: 'Return Date',
                 fillColor: Colors.blue,
               ),
             ),
             Container(
-                padding: const EdgeInsets.only(left: 190.0, top: 40.0),
-                child: const ElevatedButton(
-                  child: Text('Submit'),
-                  onPressed: null,
-                )),
+              padding: const EdgeInsets.only(left: 190.0, top: 40.0),
+              child: const ElevatedButton(
+                  onPressed: null, 
+                  child: Text('Submit')
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
