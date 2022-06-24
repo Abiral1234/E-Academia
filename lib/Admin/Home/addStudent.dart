@@ -61,7 +61,7 @@ class _AddStudentFormState extends State<AddStudentForm> {
           children: <Widget>[
             TextFormField(
               decoration: const InputDecoration(
-                hintText: 'Input Student Id',
+                hintText: 'Enter Student Id',
                 labelText: 'Student Id',
                 fillColor: Colors.blue,
               ),
