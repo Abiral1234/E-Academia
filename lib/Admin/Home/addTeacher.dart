@@ -7,15 +7,14 @@ import 'package:flutter/material.dart';
 
 import '../../Colors.dart';
 
-
-class AddClass extends StatefulWidget {
-  const AddClass({Key? key}) : super(key: key);
+class AddTeacher extends StatefulWidget {
+  const AddTeacher({Key? key}) : super(key: key);
 
   @override
-  State<AddClass> createState() => _AddClassState();
+  State<AddTeacher> createState() => _AddTeacherState();
 }
 
-class _AddClassState extends State<AddClass> {
+class _AddTeacherState extends State<AddTeacher> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,21 +33,20 @@ class _AddClassState extends State<AddClass> {
             sigmaX: 5.0,
             sigmaY: 5.0,
           ),
-          child: AddClassForm(),
+          child: AddTeacherForm(),
         ),
       ),
     );
   }
 }
-
-class AddClassForm extends StatefulWidget {
-  const AddClassForm({Key? key}) : super(key: key);
+class AddTeacherForm extends StatefulWidget {
+  const AddTeacherForm({Key? key}) : super(key: key);
 
   @override
-  State<AddClassForm> createState() => _AddClassFormState();
+  State<AddTeacherForm> createState() => _AddTeacherFormState();
 }
 
-class _AddClassFormState extends State<AddClassForm> {
+class _AddTeacherFormState extends State<AddTeacherForm> {
 
   final _formkey = GlobalKey<FormState>();
 
@@ -58,33 +56,41 @@ class _AddClassFormState extends State<AddClassForm> {
       margin: const EdgeInsets.all(24),
       child: Form(
         key: _formkey,
-
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             TextFormField(
               decoration: const InputDecoration(
-                hintText: 'Enter Class Id',
-                labelText: 'Class Id',
+                hintText: 'Enter Teacher Id',
+                labelText: 'Teacher Id',
                 fillColor: Colors.blue,
               ),
             ),
             TextFormField(
               decoration: const InputDecoration(
-                hintText: 'Enter Class Name',
-                labelText: 'Class Name',
+                hintText: 'Enter Teacher Name',
+                labelText: 'Teacher Name',
+                fillColor: Colors.blue,
+              ),
+            ),
+            TextFormField(
+              decoration: const InputDecoration(
+                hintText: 'Enter Phone Number',
+                labelText: 'Phone Number',
                 fillColor: Colors.blue,
               ),
             ),
             Container(
-                padding: const EdgeInsets.only(left: 190.0, top: 40.0),
-                child: const ElevatedButton(
-                  child: Text('Submit'),
+              padding: const EdgeInsets.only(left: 190.0, top: 40.0),
+              child: const ElevatedButton(
                   onPressed: null,
-                )),
+                  child: Text('Submit')
+              ),
+            )
           ],
         ),
       ),
     );
   }
 }
+
