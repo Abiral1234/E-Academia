@@ -32,21 +32,31 @@ class _AdminHomeState extends State<AdminHome> {
             onTap: (){Navigator.of(context).pushNamed('/Add_Class'); },
               child: Cards('assets/classroom.svg','Add Class')
           ),
+
           GestureDetector(
             onTap: (){Navigator.of(context).pushNamed('/Add_Teacher'); },
             child: Cards('assets/teacher.svg','Add Teacher'),
           ),
+
           GestureDetector(
             onTap: (){Navigator.of(context).pushNamed('/Add_Student');},
             child: Cards('assets/student.svg','Add Student'),
           ),
+
           GestureDetector(
             onTap: (){Navigator.of(context).pushNamed('/Add_Books');},
             child: Cards('assets/book.svg','Add Books'),
           ),
-          Cards('assets/fee.svg','Fee Notification'),
-          Cards('assets/notification.svg','Event Notification'),
 
+          GestureDetector(
+          onTap: (){Navigator.of(context).pushNamed('/Fee_Notification');},
+          child:Cards('assets/fee.svg','Fee Notification'),
+          ),
+        GestureDetector(
+        onTap: (){Navigator.of(context).pushNamed('/Event_Notification');},
+
+         child : Cards('assets/notification.svg','Event Notification'),
+        ),
         ],
         ),
       );

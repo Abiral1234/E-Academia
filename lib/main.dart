@@ -17,8 +17,6 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'E-Academia',
-      home: BottomNavBar(),
-
       initialRoute: '/',
       onGenerateRoute: RouteGenerator.generateRoute,
 
