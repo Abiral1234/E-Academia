@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:eacademia/Admin/AdminHome.dart';
-import 'package:eacademia/Components/Cards.dart';
-import 'package:eacademia/Components/BottomNavBar.dart';
-import 'package:eacademia/Components/DefaultTextField.dart';
+import 'package:eacademia/AdminComponents/Cards.dart';
+import 'package:eacademia/AdminComponents/Admin.dart';
+import 'package:eacademia/AdminComponents/DefaultTextField.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

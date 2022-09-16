@@ -1,4 +1,4 @@
-import 'package:eacademia/Components/EacademiaAppBar.dart';
+import 'package:eacademia/AdminComponents/EacademiaAppBar.dart';
 import 'package:flutter/material.dart';
 import '../Admin/AdminHome.dart';
 import '../Admin/AdminMessages.dart';
@@ -8,20 +8,20 @@ import '../Admin/AdminSetting.dart';
 import '../Colors.dart';
 import '../Fonts.dart';
 
-class BottomNavBar extends StatefulWidget {
-  const BottomNavBar({Key? key}) : super(key: key);
+class Admin extends StatefulWidget {
+  const Admin({Key? key}) : super(key: key);
 
   @override
-  State<BottomNavBar> createState() => _BottomNavBarState();
+  State<Admin> createState() => _AdminState();
 }
 
-class _BottomNavBarState extends State<BottomNavBar>with TickerProviderStateMixin {
+class _AdminState extends State<Admin>with TickerProviderStateMixin {
 
   int currentIndex=0;
   final screens = [
     AdminHome(),
     AdminMessages(),
-    Drawer(),
+    AdminSendRequestToDeveloper(),
     AdminSetting(),
     AdminProfile(),
   ];

@@ -1,12 +1,12 @@
 import 'dart:ui';
 import 'package:eacademia/Admin/AdminHome.dart';
-import 'package:eacademia/Components/Cards.dart';
-import 'package:eacademia/Components/BottomNavBar.dart';
+import 'package:eacademia/AdminComponents/Cards.dart';
+import 'package:eacademia/AdminComponents/Admin.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
 
 import '../../Colors.dart';
-import '../../Components/DefaultTextField.dart';
+import '../../AdminComponents/DefaultTextField.dart';
 
 class AddTeacher extends StatefulWidget {
   const AddTeacher({Key? key}) : super(key: key);
@@ -58,48 +58,50 @@ class _AddTeacherFormState extends State<AddTeacherForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(24),
-      child: Form(
-        key: _formkey,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text('Teacher ID',style: TextStyle(fontSize: 16),),
-            SizedBox(height: 10,),
-            DefaultTextField(hintText: 'Teacher ID'),
-            SizedBox(height: 15,),
-            Text('Teacher Name',style: TextStyle(fontSize: 16),),
-            SizedBox(height: 10,),
-            DefaultTextField(hintText: 'Teacher Name'),
-            SizedBox(height: 15,),
-            Text('Subject Assigned',style: TextStyle(fontSize: 16),),
-            SizedBox(height: 10,),
-            DefaultTextField(hintText: 'Subject 1 Name'),
-            SizedBox(height: 15,),
-            Text('Contact Number',style: TextStyle(fontSize: 16),),
-            SizedBox(height: 10,),
-            DefaultTextField(hintText: 'Contact Number'),
-            SizedBox(height: 15,),
-            Text('D.O.B',style: TextStyle(fontSize: 16),),
-            SizedBox(height: 10,),
-            DefaultTextField(hintText: 'DOB'),
-            SizedBox(height: 15,),
-            ElevatedButton(onPressed: (){}, child: Padding(
-              padding: const EdgeInsets.all(4.0),
-              child: Text('Submit',style: TextStyle(fontSize: 18),),
-            )),
-            SizedBox(
-              height: 10,
-            ),
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: green,
-                ),
-                onPressed: (){ _goToTeacherList();},
-                child: Text("Show All Teacher" ,style: TextStyle(fontSize: 16),)
-            ),
-          ],
+    return SingleChildScrollView(
+      child: Container(
+        margin: const EdgeInsets.all(24),
+        child: Form(
+          key: _formkey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text('Teacher ID',style: TextStyle(fontSize: 16),),
+              SizedBox(height: 10,),
+              DefaultTextField(hintText: 'Teacher ID'),
+              SizedBox(height: 15,),
+              Text('Teacher Name',style: TextStyle(fontSize: 16),),
+              SizedBox(height: 10,),
+              DefaultTextField(hintText: 'Teacher Name'),
+              SizedBox(height: 15,),
+              Text('Subject Assigned',style: TextStyle(fontSize: 16),),
+              SizedBox(height: 10,),
+              DefaultTextField(hintText: 'Subject 1 Name'),
+              SizedBox(height: 15,),
+              Text('Contact Number',style: TextStyle(fontSize: 16),),
+              SizedBox(height: 10,),
+              DefaultTextField(hintText: 'Contact Number'),
+              SizedBox(height: 15,),
+              Text('D.O.B',style: TextStyle(fontSize: 16),),
+              SizedBox(height: 10,),
+              DefaultTextField(hintText: 'DOB'),
+              SizedBox(height: 15,),
+              ElevatedButton(onPressed: (){}, child: Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Text('Submit',style: TextStyle(fontSize: 18),),
+              )),
+              SizedBox(
+                height: 10,
+              ),
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: green,
+                  ),
+                  onPressed: (){ _goToTeacherList();},
+                  child: Text("Show All Teacher" ,style: TextStyle(fontSize: 16),)
+              ),
+            ],
+          ),
         ),
       ),
     );
